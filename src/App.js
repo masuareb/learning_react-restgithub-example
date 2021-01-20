@@ -7,8 +7,13 @@ function App() {
   const fetchData = () => {
     // REST API call comes here
   }
+  const handleChange = (e) => {
+    setKeyword(e.target.value);
+  }
   return (
     <div className="App">
+      <input type="text" onChange={handleChange} />
+      <button onClick={fetchData} value={keyword}>fetch</button>
     </div>
   );
 }
